@@ -16,7 +16,7 @@ func main() {
 
 	// CORS com configuração customizada
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:4200", "https://premiss.io"}, // origens permitidas
+		AllowOrigins:     []string{"http://localhost:4200"}, // origens permitidas
 		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
