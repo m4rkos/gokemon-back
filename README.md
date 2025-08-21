@@ -36,8 +36,8 @@ project/
 ## 🔧 Usage
 ### Installation
 ```bash
-git clone https://github.com/yourusername/pokeapi-gin.git
-cd pokeapi-gin
+git clone https://github.com/m4rkos/gokemon-back.git
+cd gokemon-back
 go mod tidy
 ```
 
