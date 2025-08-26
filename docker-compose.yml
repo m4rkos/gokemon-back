@@ -5,11 +5,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: go-test-app
+    image: gokemon-back-image
+    container_name: gokemon-back-container
     ports:
       - "8080:8080" # mapeia porta do host para o container
     restart: unless-stopped
     environment:
       - ENV=production
-    # volumes: 
+    # volumes:
     #   - ./logs:/app/logs # descomente se quiser mapear logs ou outro diretório
