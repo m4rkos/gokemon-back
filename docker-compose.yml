@@ -18,5 +18,5 @@ services:
       - shared-net
 
 networks:
-  default:
+  shared-net:
     external: true
