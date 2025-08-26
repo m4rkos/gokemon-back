@@ -14,8 +14,9 @@ services:
       - ENV=production
     # volumes:
     #   - ./logs:/app/logs # descomente se quiser mapear logs ou outro diretório
+    networks:
+      - shared-net
 
 networks:
   default:
-    external:
-      name: app-shared-net
+    external: true
