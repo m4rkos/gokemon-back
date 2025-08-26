@@ -16,7 +16,7 @@ func main() {
 
 	// CORS com configuração customizada
 	router.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:4200"}, // origens permitidas
+		AllowOrigins:     []string{"http://localhost:4200", "*"}, // origens permitidas
 		AllowMethods:     []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 		ExposeHeaders:    []string{"Content-Length"},
@@ -24,9 +24,9 @@ func main() {
 		MaxAge:           12 * time.Hour, // cache do preflight
 	}))
 
-	router.GET("/ping", func(c *gin.Context) {
+	router.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"message": "pong",
+			"message": "Hello stranger!!!",
 		})
 	})
 	// GET /pokemon/:nameOrID  (ex.: /pokemon/ditto ou /pokemon/132)
