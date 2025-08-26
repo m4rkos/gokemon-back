@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  gokemon-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go-test-app
+    ports:
+      - "8080:8080" # mapeia porta do host para o container
+    restart: unless-stopped
+    environment:
+      - ENV=production
+    # volumes: 
+    #   - ./logs:/app/logs # descomente se quiser mapear logs ou outro diretório
